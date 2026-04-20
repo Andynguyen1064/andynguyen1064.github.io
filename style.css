@@ -67,6 +67,33 @@ nav {
   justify-content: center;
 }
 
+.hero-illustration {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.24);
+  border: 1px solid rgba(219, 234, 254, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-illustration:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 28px 54px rgba(15, 23, 42, 0.3);
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-graphic-card {
   width: 100%;
   max-width: 340px;
