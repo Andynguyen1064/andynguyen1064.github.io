@@ -18,19 +18,52 @@
       </div>
     </nav>
 
-    <div class="hero-content">
-      <p class="eyebrow">Data Analyst / Product Analyst Portfolio</p>
-      <h1>Turning raw data into dashboards, insights, and analytics products.</h1>
-      <p class="hero-text">
-        I build analytics projects using SQL, Python, Streamlit, Tableau, JavaScript,
-        and dashboard design to help stakeholders understand trends, risks, and opportunities.
-      </p>
+    <div class="hero-layout">
+        <div class="hero-content">
+            <p class="eyebrow">Data Analyst / Product Analyst Portfolio</p>
+            <h1>Turning raw data into dashboards, insights, and analytics products.</h1>
+            <p class="hero-text">
+                I build analytics projects using SQL, Python, Streamlit, Tableau, JavaScript,
+                and dashboard design to help stakeholders understand trends, risks, and opportunities.
+            </p>
 
-      <div class="hero-buttons">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn secondary" href="https://github.com/Andynguyen1064" target="_blank">GitHub</a>
-      </div>
+            <div class="hero-buttons">
+                <a class="btn primary" href="#projects">View Projects</a>
+                <a class="btn secondary" href="https://github.com/Andynguyen1064" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="hero-visual reveal-up">
+            <div class="hero-graphic-card">
+                <div class="graphic-badge">📈 Analytics</div>
+
+                <div class="graphic-title">Insight Snapshot</div>
+                <div class="graphic-subtitle">From raw data → KPI dashboards</div>
+
+                <div class="mini-chart">
+                <div class="chart-bars">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                    <span class="bar bar-4"></span>
+                </div>
+
+                <div class="chart-line">
+                    <span class="dot dot-1"></span>
+                    <span class="dot dot-2"></span>
+                    <span class="dot dot-3"></span>
+                    <span class="dot dot-4"></span>
+                </div>
+            </div>
+
+            <div class="graphic-footer">
+                <span>KPI Design</span>
+                <span>Dashboards</span>
+                <span>Insights</span>
+            </div>
+        </div>
     </div>
+</div>
   </header>
 
     <section class="skills-strip">
@@ -74,13 +107,13 @@
     </section>
 
     <section class="section" id="projects">
-      <h2>Featured Projects</h2>
+      <h2>📊 Featured Projects</h2>
         <p class="section-subtitle">Selected analytics projects focused on dashboards, automation, SQL, and product insights.</p>
 
       <div class="project-grid">
 
         <article class="project-card featured">
-            <div class="project-label">Featured Project</div>
+            <div class="project-label">⭐ Featured Project</div>
             <h3>Patient Outcomes Product Analytics Dashboard</h3>
 
             <img 
@@ -117,7 +150,7 @@
         </article>
 
         <article class="project-card">
-            <div class="project-type">Operations Analytics</div>
+            <div class="project-type">🚚 Operations Analytics</div>
           <h3>Specimen Shipment Integrity & Exception Risk Analysis</h3>
 
           <img 
@@ -143,7 +176,7 @@
         </article>
 
         <article class="project-card">
-            <div class="project-type">Analytics Automation</div>
+            <div class="project-type">🤖 Analytics Automation</div>
             <h3>Discord Game Session Analytics Bot</h3>
 
             <img 
@@ -171,7 +204,7 @@
         </article>
 
         <article class="project-card">
-            <div class="project-type">Product Analytics</div>
+            <div class="project-type">🎲 Product Analytics</div>
             <h3>Catan Analytics Dashboard</h3>
 
             <img 
@@ -201,7 +234,7 @@
     </section>
 
     <section class="section" id="work-in-progress">
-        <h2>Work in Progress</h2>
+        <h2>🚧 Work in Progress</h2>
         <p class="section-subtitle">
             Projects I am actively improving, expanding, or preparing for future portfolio updates.
         </p>
@@ -232,7 +265,7 @@
                 </article>
 
                 <article class="project-card">
-                <div class="project-type">Healthcare Analytics</div>
+                <div class="project-type">🏥 Healthcare Analytics</div>
                 <h3>Patient Outcomes Dashboard Enhancements</h3>
 
                 <img 
@@ -258,7 +291,7 @@
             </section>
 
     <section class="section" id="skills">
-      <h2>Skills</h2>
+      <h2>🛠️ Skills</h2>
       <div class="skills-grid">
         <div>
           <h3>Analytics</h3>
@@ -276,7 +309,7 @@
     </section>
 
     <section class="section contact" id="contact">
-      <h2>Contact</h2>
+      <h2>📬 Contact</h2>
       <p>
         View more of my work on GitHub or connect with me on LinkedIn.
       </p>
@@ -302,6 +335,20 @@
     <footer>
     <p>© 2026 Andy Nguyen. Built with HTML, CSS, GitHub Pages, and a lot of dashboard iterations.</p>
     </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll(".reveal-up");
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+            });
+        }, { threshold: 0.2 });
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+    </script>
 
 </body>
 </html>
