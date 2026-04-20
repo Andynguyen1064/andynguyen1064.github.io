@@ -241,16 +241,33 @@ main {
   display: block;
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 300px;
   object-fit: cover;
+  object-position: top;
   border-radius: 16px;
   border: 1px solid #bfdbfe;
   margin: 14px 0 18px;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.small-preview {
+  height: 190px;
+}
+
+.project-preview:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
 }
 
 .project-card {
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
 .project-highlights {
