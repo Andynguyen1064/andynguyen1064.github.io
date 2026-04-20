@@ -238,11 +238,19 @@ main {
 }
 
 .project-preview {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 16px;
   border: 1px solid #bfdbfe;
   margin: 14px 0 18px;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.project-card {
+  overflow: hidden;
 }
 
 .project-highlights {
