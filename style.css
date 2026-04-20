@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+/* -----------------------------
+   Hero
+----------------------------- */
+
 .hero {
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #2563eb 100%);
   color: white;
@@ -85,7 +89,7 @@ h1 {
   padding: 11px 16px;
   border-radius: 999px;
   font-weight: 700;
-  transition: 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn.primary,
@@ -102,7 +106,37 @@ h1 {
 .btn:hover,
 .project-links a:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.18);
 }
+
+/* -----------------------------
+   Skills Strip
+----------------------------- */
+
+.skills-strip {
+  max-width: 1180px;
+  margin: -34px auto 26px;
+  padding: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.skills-strip span {
+  background: white;
+  color: #1e3a8a;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+/* -----------------------------
+   Main Layout
+----------------------------- */
 
 main {
   max-width: 1180px;
@@ -131,6 +165,10 @@ main {
   color: #475569;
 }
 
+/* -----------------------------
+   Projects
+----------------------------- */
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -142,6 +180,14 @@ main {
   border-radius: 18px;
   padding: 24px;
   background: #f8fafc;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.14);
+  border-color: #bfdbfe;
 }
 
 .project-card.featured {
@@ -172,6 +218,45 @@ main {
   margin-bottom: 16px;
 }
 
+/* Project preview images */
+.project-preview {
+  display: block;
+  width: 92%;
+  max-width: 920px;
+  height: 260px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px;
+  border: 1px solid #bfdbfe;
+  margin: 16px auto 20px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transform-origin: center;
+}
+
+.project-preview:hover {
+  transform: scale(1.045);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.18);
+  border-color: #2563eb;
+}
+
+.small-preview {
+  width: 100%;
+  max-width: 100%;
+  height: 190px;
+  margin: 14px 0 18px;
+}
+
+.project-highlights {
+  margin: 0 0 18px 18px;
+  color: #475569;
+}
+
+.project-highlights li {
+  margin-bottom: 6px;
+}
+
+/* Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -188,6 +273,10 @@ main {
   font-size: 0.85rem;
   font-weight: 700;
 }
+
+/* -----------------------------
+   Skills
+----------------------------- */
 
 .skills-grid {
   display: grid;
@@ -210,6 +299,21 @@ main {
 .skills-grid p {
   color: #475569;
 }
+
+/* -----------------------------
+   Footer
+----------------------------- */
+
+footer {
+  text-align: center;
+  color: #64748b;
+  padding: 30px 20px 50px;
+  font-size: 0.95rem;
+}
+
+/* -----------------------------
+   Responsive
+----------------------------- */
 
 @media (max-width: 800px) {
   nav,
@@ -235,74 +339,10 @@ main {
   .section {
     padding: 24px;
   }
-}
 
-.project-preview {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 16px;
-  border: 1px solid #bfdbfe;
-  margin: 14px 0 18px;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.small-preview {
-  height: 190px;
-}
-
-.project-preview:hover {
-  transform: scale(1.03);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
-}
-
-.project-card {
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
-}
-
-.project-highlights {
-  margin: 0 0 18px 18px;
-  color: #475569;
-}
-
-.project-highlights li {
-  margin-bottom: 6px;
-}
-
-.skills-strip {
-  max-width: 1180px;
-  margin: -34px auto 26px;
-  padding: 0 24px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  position: relative;
-  z-index: 2;
-}
-
-.skills-strip span {
-  background: white;
-  color: #1e3a8a;
-  border: 1px solid #bfdbfe;
-  border-radius: 999px;
-  padding: 9px 14px;
-  font-weight: 800;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-}
-
-footer {
-  text-align: center;
-  color: #64748b;
-  padding: 30px 20px 50px;
-  font-size: 0.95rem;
+  .project-preview,
+  .small-preview {
+    width: 100%;
+    height: 190px;
+  }
 }
