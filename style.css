@@ -593,6 +593,60 @@ footer {
   margin-bottom: 10px;
 }
 
+.status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 12px;
+}
+
+.status-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+}
+
+.status-badge.live {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #86efac;
+}
+
+.status-badge.case-study {
+  background: #dbeafe;
+  color: #1e3a8a;
+  border-color: #bfdbfe;
+}
+
+.status-badge.tableau {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.status-badge.github {
+  background: #f3f4f6;
+  color: #111827;
+  border-color: #d1d5db;
+}
+
+.status-badge.code {
+  background: #f5f3ff;
+  color: #5b21b6;
+  border-color: #ddd6fe;
+}
+
+.status-badge.in-progress {
+  background: #fff7ed;
+  color: #c2410c;
+  border-color: #fed7aa;
+}
+
+
 /* -----------------------------
    Work in Progress
 ----------------------------- */
@@ -626,6 +680,50 @@ footer {
 
 @media (max-width: 800px) {
   .stats-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.workflow-grid div {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.workflow-grid div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+}
+
+.workflow-grid span {
+  display: inline-block;
+  color: white;
+  background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.workflow-grid h3 {
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.workflow-grid p {
+  color: #475569;
+}
+
+@media (max-width: 900px) {
+  .workflow-grid {
     grid-template-columns: 1fr;
   }
 }
