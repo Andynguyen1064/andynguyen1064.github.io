@@ -335,8 +335,7 @@ main {
   color: #0f172a;
 }
 
-.about p,
-.contact p {
+.about p {
   max-width: 850px;
   color: #475569;
 }
