@@ -310,6 +310,41 @@ h1 {
   box-shadow: 0 8px 20px rgba(13, 148, 136, 0.26);
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 28px;
+}
+
+.about-text p {
+  max-width: 850px;
+  color: #475569;
+}
+
+.about-photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid #dbeafe;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.18);
+}
+
+
 /* -----------------------------
    Main Layout
 ----------------------------- */
@@ -533,6 +568,20 @@ footer {
     .hero-graphic-card {
     max-width: 320px;
   }
+
+  .about-layout {
+  grid-template-columns: 1fr;
+  }
+
+  .about-photo-wrap {
+    justify-content: flex-start;
+  }
+
+  .about-photo {
+    width: 100px;
+    height: 100px;
+  }
+
 
 }
 
